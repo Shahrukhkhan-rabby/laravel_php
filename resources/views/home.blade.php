@@ -7,15 +7,16 @@
         <div class="col-9 pt-5">
             <div>
                 <h1>{{ $user->username }}</h1>
+                <a href="">Add New Post</a>
             </div>
             <div class="d-flex">
                 <div class="pe-5"><strong>153</strong> posts</div>
                 <div class="pe-5"><strong>23k</strong> followers</div>
                 <div class="pe-5"><strong>213</strong> following</div>
             </div>
-            <div class="pt-4 fw-bold">PeaceIT.com</div>
-            <div>PeaceIT is a tech farm where practicing Muslims work, combining technology with peaceful Islamic outreach to share truth with non-Muslims through respectful dawah.</div>
-            <div><a href="#">www.peaceit.com</a></div>
+            <div class="pt-4 fw-bold">{{ $user->profile->title}}</div>
+            <div>{{ $user->profile->description}}</div>
+            <div><a href="#">{{$user->profile->url}}</a></div>
         </div>
     </div>
     <div class="row pt-5">

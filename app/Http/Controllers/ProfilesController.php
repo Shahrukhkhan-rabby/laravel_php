@@ -9,11 +9,8 @@ class ProfilesController extends Controller
 {
     public function index($user)
     {
-        $user = User::find($user);
-        if(!$user){
-            abort(404, "User not found");
-        }
-
+        $user = User::findOrFail($user);
+       
         return view('home', [
             'user' => $user,
 
